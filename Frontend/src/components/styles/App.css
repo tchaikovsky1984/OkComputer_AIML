@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Microfont'; /* Choose a name for your font */
+  src: url('/home/user/OkComputer_AIML/Frontend/public/fonts/microfont.ttf') format('truetype'); /* Path to your font file */
+  font-weight: normal; /* Adjust if your font has different weights */
+  font-style: normal; /* Adjust if your font has different styles */
+}
+
 .app {
     display: flex;
     padding-top: 80px;
@@ -7,25 +14,27 @@
   .sidebar {
     position: fixed; /* Makes the sidebar fixed */
     left: 0; /* Positions it to the left */
-    top: 80px; /* Adjust top position to avoid overlap with the header*/
+    top: 70px; /* Adjust top position to avoid overlap with the header*/
     width: 250px; /* Set the width of the sidebar */
     height: 100vh; /* Make it occupy full viewport height */
     overflow-y: auto; /* Enable vertical scrolling within the sidebar if content overflows */
-    background-color: #f7f7f7; /* Choose your background color */
+    background-color: #ffffff; /* Choose your background color */
     padding: 20px; /* Add some padding for spacing */
-    border-right: 1px solid #ccc; /* Optional: Add a right border */
+    border-right: 1px solid #000000;/* Optional: Add a right border */
+    flex: 0 0 250px; /* Fixed width for sidebar */
+
   }
   
   .job-list {
     flex: 1;
-    padding: 20px;
+    padding: 0px;
   }
   
   .job-card {
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    /*border-radius: 5px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,15 +59,33 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #f7f7f7; /* Choose your desired background color */
-    padding: 20px; /* Add padding for spacing */
+    height: 70px;
+    
+    background-color: #ffffff; /* Choose your desired background color */
+    padding: 0px; /* Add padding for spacing */
     z-index: 100; /* Make sure it appears on top */
     border-bottom: 1px solid #000000; /* Optional: Add a border */
   }
   /* For headings (h1, h2, etc.) */
+.fixed-header h1 {
+  color: #000;
+  font-family: Microfont;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 10px; /* 66.667% */
+  letter-spacing: -0.6px;
+  }
+
+  h1 {
+    font-family: 'Microfont', sans-serif;
+
+  }
+
 h1, h2 {
   font-family: 'Google Sans', sans-serif;
   font-weight: 700; /* Bold */
+  /* padding-left: 20px;*/
 }
 
 /* For body text and other elements */

@@ -39,7 +39,6 @@ function Sidebar() {
   };
   return (
     <form className="sidebar" onSubmit={handleSubmit}>{/* Change to <form> */}
-      <h1>OkComputer</h1>
       <h2>Upload your Resume</h2>
       <div className="upload-box">
         <input 
