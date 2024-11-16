@@ -1,0 +1,10 @@
+.job-card h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .job-card p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
