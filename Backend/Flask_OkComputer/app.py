@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
+from logging import FileHandler,WARNING
 import model
 import os
 
 app = Flask(__name__, static_folder='build', static_url_path='/')
-
+file_handler = FileHandler('errorlog.txt')
+file_handler.setLevel(WARNING)
 CORS(app)
 # Route to serve React's index.html
 @app.route('/')
