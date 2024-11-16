@@ -1,12 +1,19 @@
 .app {
     display: flex;
+    padding-top: 80px;
+    margin-left: 250px;
   }
   
   .sidebar {
-    width: 25%;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border-right: 1px solid #ccc;
+    position: fixed; /* Makes the sidebar fixed */
+    left: 0; /* Positions it to the left */
+    top: 80px; /* Adjust top position to avoid overlap with the header*/
+    width: 250px; /* Set the width of the sidebar */
+    height: 100vh; /* Make it occupy full viewport height */
+    overflow-y: auto; /* Enable vertical scrolling within the sidebar if content overflows */
+    background-color: #f7f7f7; /* Choose your background color */
+    padding: 20px; /* Add some padding for spacing */
+    border-right: 1px solid #ccc; /* Optional: Add a right border */
   }
   
   .job-list {
@@ -37,5 +44,15 @@
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+  }
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f7f7f7; /* Choose your desired background color */
+    padding: 20px; /* Add padding for spacing */
+    z-index: 100; /* Make sure it appears on top */
+    border-bottom: 1px solid #ccc; /* Optional: Add a border */
   }
   
