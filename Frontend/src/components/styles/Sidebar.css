@@ -1,11 +1,21 @@
+.sidebar h1, 
+.sidebar h2, 
+.sidebar .upload-box, 
+.sidebar .input-box {
+  width: 98%;
+  text-align: center;
+}
+
 .sidebar h1 {
     font-size: 24px;
     margin-bottom: 20px;
+    background-color: #f1f1f1;
   }
   
   .sidebar h2 {
     margin-bottom: 10px;
     font-size: 18px;
+    display: flex;
   }
   
   .upload-box button {
@@ -21,4 +31,12 @@
     background-color: #f1f1f1;
     border-radius: 5px;
   }
+  .sidebar {
+    /* ... other styles ... */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+ 
   
