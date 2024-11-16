@@ -12,7 +12,7 @@ Mohammed Amaan Thayyil - mhd21amaan@gmail.com
 
 Aldrin Shanty - aldrinshanty22@gmail.com
 
-Akhil R
+Akhil R - Latebyciclenz@gmail.com
 
 ___
 ### Contribution Policy
