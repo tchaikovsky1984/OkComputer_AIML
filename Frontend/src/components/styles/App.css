@@ -22,23 +22,11 @@
     padding: 20px; /* Add some padding for spacing */
     border-right: 1px solid #000000;/* Optional: Add a right border */
     flex: 0 0 250px; /* Fixed width for sidebar */
+    align-items: center;
+    height: 100vh;
 
   }
   
-  .job-list {
-    flex: 1;
-    padding: 0px;
-  }
-  
-  .job-card {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    /*border-radius: 5px; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   
   button {
     padding: 5px 10px;
@@ -60,7 +48,7 @@
     left: 0;
     width: 100%;
     height: 70px;
-    
+    padding-left: 10px;
     background-color: #ffffff; /* Choose your desired background color */
     padding: 0px; /* Add padding for spacing */
     z-index: 100; /* Make sure it appears on top */
@@ -79,7 +67,7 @@
 
   h1 {
     font-family: 'Microfont', sans-serif;
-
+    padding-left: 20px;
   }
 
 h1, h2 {
