@@ -7,8 +7,11 @@ ___
 ### Contributors and Maintainers
 
 Ansul Kumar - anshulkumarg0re@gmail.com
+
 Mohammed Amaan Thayyil - mhd21amaan@gmail.com
+
 Aldrin Shanty - aldrinshanty22@gmail.com
+
 Akhil R
 
 ___
