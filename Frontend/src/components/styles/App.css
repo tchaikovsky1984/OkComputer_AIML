@@ -53,6 +53,24 @@
     background-color: #f7f7f7; /* Choose your desired background color */
     padding: 20px; /* Add padding for spacing */
     z-index: 100; /* Make sure it appears on top */
-    border-bottom: 1px solid #ccc; /* Optional: Add a border */
+    border-bottom: 1px solid #000000; /* Optional: Add a border */
   }
+  /* For headings (h1, h2, etc.) */
+h1, h2 {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+/* For body text and other elements */
+body, p, input, button {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 400; /* Regular (or 500 for Medium) */
+}
+
+/*For other elements or classes*/
+.class-name
+{
+ font-family: 'Google Sans', sans-serif;
+  font-weight: 400; /* Regular (or 500 for Medium) */
+}
   
