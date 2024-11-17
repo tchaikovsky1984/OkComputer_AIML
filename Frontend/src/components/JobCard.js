@@ -2,17 +2,20 @@ import React from 'react';
 import SkillButton from './SkillButton';
 import './styles/JobCard.css';
 
-function JobCard({ title, company, location, skills }) {
+function JobCard({ title, company, location, skills_matched, skills_missed }) {
   return (
     <div className="job-card">
       <div className="title-location-container">
         <h3>{title}</h3>
-        <p>At {company}, {location}</p> {/* Company and location with "At" prefix */}
+        <p>At {company}, {location}</p>
       </div>
-      <div className="vertical-line"></div> {/* Add the line */}
+      <div className="vertical-line"></div>
       <div className="skill-buttons-container">
-        {skills.map((skill, index) => (
-          <SkillButton key={index}>{skill}</SkillButton>
+        {skills_matched.map((skill, index) => (
+          <SkillButton key={index} className="skill-matched">{skill}</SkillButton> 
+        ))}
+        {skills_missed.map((skill, index) => (
+          <SkillButton key={index} className="skill-missed">{skill}</SkillButton> 
         ))}
       </div>
     </div>
@@ -20,3 +23,4 @@ function JobCard({ title, company, location, skills }) {
 }
 
 export default JobCard;
+/**/

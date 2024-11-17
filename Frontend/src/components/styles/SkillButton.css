@@ -14,3 +14,11 @@
     flex-wrap: wrap;      /* Allow buttons to wrap if they overflow */
     gap: 10px;            /* Adjust spacing between buttons */
   }
+  .skill-button.skill-matched { /* Target skill-matched class */
+    border: 2px solid #2e620d;
+  }
+  
+  .skill-button.skill-missed { /* Target skill-missed class */
+    border: 2px solid #981616;
+  }
+  /**/

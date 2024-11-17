@@ -3,12 +3,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from PyPDF2 import PdfReader
 import nltk
+from jobspy import scrape_jobs
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 import string
 import json
-
 
 nltk.download('punkt')
 nltk.download('wordnet')
