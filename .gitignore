@@ -2,3 +2,4 @@ Backend/Flask_OkComputer/build/
 Backend/Flask_OkComputer/__pycache__
 Frontend/node_modules
 .vscode
+env/

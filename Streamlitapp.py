@@ -300,7 +300,10 @@ def extract_resume_text(pdf_file):
 import pandas as pd
 import streamlit as st
 from streamlit.components.v1 import html
-
+def color_skills(post):
+    matched=", ".join(post.get("skills_matched",[]))
+    missing=", ".join(post.get("skills_missing",[]))
+    return matched,missing
 # Sidebar for user inputs
 with st.sidebar:
     st.write("### Enter Details")
@@ -317,7 +320,10 @@ if search_button:
     if pdf_file and job_title and job_location:
         # Extract text from the resume PDF
         resume_text = extract_resume_text(pdf_file)
-
+        if not job_title:
+            job_title=None
+	if not job_locaion:
+	    job_location=None
         # Placeholder for model function (replace with actual model integration)
         job_posts = main(resume_text, job_title, job_location, domain)
 
@@ -345,7 +351,7 @@ if search_button:
 
                 # Display the table with interactive styling
                 st.write("### Job Postings")
-            
+		st.write(df)            
 
                 # Expandable details
                 for i, post in enumerate(job_list, start=1):
@@ -364,11 +370,3 @@ if search_button:
             st.error("Failed to parse the job postings. Please check the model's output.")
     else:
         st.warning("Please fill in all the fields and upload a valid resume PDF.")
-
-
-
-
-
-
-
-
