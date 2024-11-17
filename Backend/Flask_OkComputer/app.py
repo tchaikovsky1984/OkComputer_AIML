@@ -33,7 +33,7 @@ def predict():
             file.save(file_path)
 
             # Example ML model processing (replace with your actual function)
-            recommended_jobs = model.main(filepath=file_path, job_title=job_title, job_location=location, num_outputs=3)
+            recommended_jobs = model.main(filepath=file_path, job_title=job_title, job_location=location, num_outputs=num_outputs)
             import math
 
 # Example of replacing NaN
