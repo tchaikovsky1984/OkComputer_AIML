@@ -3,4 +3,4 @@ python-jobspy==1.1.75
 scikit-learn
 pandas
 nltk
-
+streamlit

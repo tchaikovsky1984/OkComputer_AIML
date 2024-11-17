@@ -245,12 +245,13 @@ def main( resume_text,job_title, job_location, num_outputs):
     job_area = None
 
     # Split job_location if it contains a comma, else handle separately
-    if ',' in job_location:
-        job_area, job_location = job_location.strip().split(',')
-        job_country = job_location.strip()
-    else:
-        job_area = job_location.strip() if job_location else None
-        job_country = job_location.strip() if job_location else None
+    if job_location!=None:
+        if ',' in job_location:
+            job_area, job_location = job_location.strip().split(',')
+            job_country = job_location.strip()
+        else:
+            job_area = job_location.strip() if job_location else None
+            job_country = job_location.strip() if job_location else None
 
     # Validate job_country is one of the accepted countries
     if job_country and job_country.lower().strip() not in ['argentina', 'australia', 'austria', 'bahrain', 'belgium', 'brazil', 'canada', 'chile', 'china', 'colombia', 'costa rica', 'czech republic', 'czechia', 'denmark', 'ecuador', 'egypt', 'finland', 'france', 'germany', 'greece', 'hong kong', 'hungary', 'india', 'indonesia', 'ireland', 'israel', 'italy', 'japan', 'kuwait', 'luxembourg', 'malaysia', 'malta', 'mexico', 'morocco', 'netherlands', 'new zealand', 'nigeria', 'norway', 'oman', 'pakistan', 'panama', 'peru', 'philippines', 'poland', 'portugal', 'qatar', 'romania', 'saudi arabia', 'singapore', 'south africa', 'south korea', 'spain', 'sweden', 'switzerland', 'taiwan', 'thailand', 'türkiye', 'turkey', 'ukraine', 'united arab emirates', 'uk', 'united kingdom', 'usa', 'us', 'united states', 'uruguay', 'venezuela', 'vietnam', 'usa/ca', 'worldwide']:
@@ -297,19 +298,18 @@ def extract_resume_text(pdf_file):
     for page in reader.pages:
         text += page.extract_text()
     return text
-import pandas as pd
-import streamlit as st
-from streamlit.components.v1 import html
+
 def color_skills(post):
-    matched=", ".join(post.get("skills_matched",[]))
-    missing=", ".join(post.get("skills_missing",[]))
-    return matched,missing
+    matched = ", ".join(post.get("skills_matched", []))
+    missing = ", ".join(post.get("skills_missing", []))
+    return matched, missing
+
 # Sidebar for user inputs
 with st.sidebar:
     st.write("### Enter Details")
     pdf_file = st.file_uploader("Upload Resume (PDF)", type=["pdf"])
-    job_title = st.text_input("Job Title", placeholder="e.g., Data Scientist")
-    job_location = st.text_input("Job Location", placeholder="e.g., New York")
+    job_title = st.text_input("Job Title (Optional)", placeholder="e.g., Data Scientist")
+    job_location = st.text_input("Job Location (Optional)", placeholder="e.g., New York")
     domain = st.slider("Job Search Domain", 300, 3000, 300)
     search_button = st.button("Get Job Postings")
 
@@ -317,14 +317,17 @@ with st.sidebar:
 st.write("## Job Search Results")
 
 if search_button:
-    if pdf_file and job_title and job_location:
+    if pdf_file:
         # Extract text from the resume PDF
         resume_text = extract_resume_text(pdf_file)
+
+        # Assign None to job_title and job_location if left empty
         if not job_title:
-            job_title=None
-	if not job_locaion:
-	    job_location=None
-        # Placeholder for model function (replace with actual model integration)
+            job_title = None
+        if not job_location:
+            job_location = None
+
+        # Fetch job postings using the model function
         job_posts = main(resume_text, job_title, job_location, domain)
 
         try:
@@ -351,7 +354,7 @@ if search_button:
 
                 # Display the table with interactive styling
                 st.write("### Job Postings")
-		st.write(df)            
+                st.write(df)
 
                 # Expandable details
                 for i, post in enumerate(job_list, start=1):
