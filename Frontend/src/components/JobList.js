@@ -1,20 +1,19 @@
-import React from "react";
-import "./styles/JobList.css";
+import React from 'react';
+import JobCard from './JobCard'; 
+import './styles/JobList.css'; 
 
-function JobList() {
+function JobList({ jobs }) { // Accept jobs prop
   return (
     <div className="job-list">
-      <div className="job-card">
-        <h3>Front End Developer</h3>
-        <p>At Goldman Sachs, Bangalore</p>
-        <button>CSS</button>
-      </div>
-      <div className="job-card">
-        <h3>Front End Developer</h3>
-        <p>At Goldman Sachs, Bangalore</p>
-        <button>CSS</button>
-      </div>
-      {/* Add more job cards as needed */}
+      {jobs.map((job, index) => ( // Map through jobs array
+        <JobCard
+          key={index}
+          title={job.title}
+          company={job.company}
+          location={job.location}
+          skills={job.skills} 
+        />
+      ))}
     </div>
   );
 }

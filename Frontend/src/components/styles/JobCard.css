@@ -1,0 +1,56 @@
+.job-card {
+    display: flex;
+    flex: 1 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;      /* Allow buttons to wrap if they overflow */
+    padding: 20px 25px 20px 27.5px; /* Adjust padding as needed */
+    align-items: center;
+    gap: 42.5px;
+    align-self: stretch;
+    /* justify-content: space-between; */
+    border-radius: 24px;
+    border: 1px solid #9AA0A6;
+    background: #F1F3F4;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+  }
+  
+  .job-card {
+    flex: 1;
+    position: relative;
+  }
+  /* ... other styles ... */
+
+.title-location-container {
+    display: flex;
+    flex-direction: column; /* Arrange title and location vertically */
+    align-items: flex-start; /* Align to the left */
+    width: 35%;
+  }
+  
+  /* Optional: Remove or adjust separate styling for company if you had any */
+  .job-card p { /* Or a more specific selector if needed */
+    font-weight: 400;
+  }
+  .skill-buttons-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: auto; /* Push container to the right */
+    width: fit-content;
+  }
+  .title-location-container h3,
+    .title-location-container p {
+        margin: 5px;
+    }
+    .vertical-line {
+        position: absolute;
+        top: 0;
+        left: calc(35% - 0.5px);
+        width: 1px;
+        height: 100%;
+        background-color: #ccc;
+        margin: 0 10px; /* Add margins for spacing */
+      }
