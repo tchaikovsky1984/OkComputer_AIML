@@ -6,59 +6,26 @@ import './components/styles/App.css';
 function App() {
   const jobData = [
     {
-      title: 'Front-End Developer',
-      company: 'Google',
-      location: 'Mountain View, CA',
-      skills: ['React', 'JavaScript', 'HTML', 'CSS']
+      "title": "Software Engineer",
+      "company": "Google",
+      "location": "Mountain View, CA",
+      "skills_matched": ["Python", "JavaScript", "React", "SQL"],
+      "skills_missed": ["Java", "AWS"]
     },
     {
-      title: 'Software Engineer',
-      company: 'Amazon',
-      location: 'Seattle, WA',
-      skills: ['Java', 'Python', 'AWS']
+      "title": "Data Scientist",
+      "company": "Amazon",
+      "location": "Seattle, WA",
+      "skills_matched": ["Python", "R", "Machine Learning", "SQL"],
+      "skills_missed": ["TensorFlow", "Spark"]
     },
     {
-      title: 'Data Scientist',
-      company: 'Microsoft',
-      location: 'Redmond, WA',
-      skills: ['Python', 'R', 'Machine Learning']
-    },
-    {
-      title: 'Software Engineer',
-      company: 'Amazon',
-      location: 'Seattle, WA',
-      skills: ['Java', 'Python', 'AWS']
-    },
-    {
-      title: 'Data Scientist',
-      company: 'Microsoft',
-      location: 'Redmond, WA',
-      skills: ['Python', 'R', 'Machine Learning']
-    },
-    {
-      title: 'Software Engineer',
-      company: 'Amazon',
-      location: 'Seattle, WA',
-      skills: ['Java', 'Python', 'AWS']
-    },
-    {
-      title: 'Data Scientist',
-      company: 'Microsoft',
-      location: 'Redmond, WA',
-      skills: ['Python', 'R', 'Machine Learning']
-    },
-    {
-      title: 'Software Engineer',
-      company: 'Amazon',
-      location: 'Seattle, WA',
-      skills: ['Java', 'Python', 'AWS']
-    },
-    {
-      title: 'Data Scientist',
-      company: 'Microsoft',
-      location: 'Redmond, WA',
-      skills: ['Python', 'R', 'Machine Learning']
-    },
+      "title": "Web Developer",
+      "company": "Facebook",
+      "location": "Menlo Park, CA",
+      "skills_matched": ["HTML", "CSS", "JavaScript", "React"],
+      "skills_missed": ["Angular", "Node.js"]
+    }  
   ];
   return (
     <div className="app"> 

@@ -5,13 +5,14 @@ import './styles/JobList.css';
 function JobList({ jobs }) { // Accept jobs prop
   return (
     <div className="job-list">
-      {jobs.map((job, index) => ( // Map through jobs array
+      {jobs.map((job, index) => (
         <JobCard
           key={index}
           title={job.title}
           company={job.company}
           location={job.location}
-          skills={job.skills} 
+          skills_matched={job.skills_matched} // Pass skills_matched
+          skills_missed={job.skills_missed} // Pass skills_missed
         />
       ))}
     </div>

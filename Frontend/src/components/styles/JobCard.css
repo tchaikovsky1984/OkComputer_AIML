@@ -10,7 +10,7 @@
     align-self: stretch;
     /* justify-content: space-between; */
     border-radius: 24px;
-    border: 1px solid #9AA0A6;
+    /*border: 1px solid #9AA0A6; */
     background: #F1F3F4;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 24px;
@@ -40,6 +40,7 @@
     gap: 10px;
     margin-left: auto; /* Push container to the right */
     width: fit-content;
+    max-width: calc(60% - 0.5px); 
   }
   .title-location-container h3,
     .title-location-container p {

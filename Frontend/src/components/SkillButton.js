@@ -1,11 +1,11 @@
 import './styles/SkillButton.css';
 
-function SkillButton({ children }) { 
-    return (
-      <div className="skill-button"> {/* Update class name */}
-        {children}
-      </div>
-    );
-  }
-  
-  export default SkillButton;
+function SkillButton({ children, className }) { // Add className prop
+  return (
+    <div className={`skill-button ${className}`}> {/* Apply className */}
+      {children}
+    </div>
+  );
+}
+
+export default SkillButton;
