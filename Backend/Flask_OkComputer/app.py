@@ -16,8 +16,7 @@ def home():
 
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-
+#hii :3
 
 # Define /predict route
 @app.route('/predict', methods=['POST'])

@@ -23,3 +23,4 @@ function JobCard({ title, company, location, skills_matched, skills_missed }) {
 }
 
 export default JobCard;
+/**/
