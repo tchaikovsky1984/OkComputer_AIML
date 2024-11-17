@@ -64,16 +64,17 @@ function Sidebar() {
     <form className="sidebar" onSubmit={handleSubmit}>
       <h2>Upload your Resume</h2>
       <div className="upload-box">
-        <input
-          type="file"
-          id="resumeUpload"
-          accept=".pdf,.doc,.docx"
-          onChange={handleResumeChange}
-        />
-        <label htmlFor="resumeUpload" className="browse-button">
-          Browse
-        </label>
-      </div>
+      <input
+        type="file"
+        id="resumeUpload"
+        accept=".pdf,.doc,.docx"
+        onChange={handleResumeChange}
+      />
+      <label htmlFor="resumeUpload" className="browse-button">
+        Choose File {/* Text for the custom button */}
+      </label>
+      <span className="filename">{resume ? resume.name : '  No file chosen'}</span> {/* Display filename */}
+    </div>
       <h2>Preferred Job</h2>
       <input
         type="text"
