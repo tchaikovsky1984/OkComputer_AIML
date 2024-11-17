@@ -10,7 +10,6 @@ from nltk.tokenize import word_tokenize
 import string
 import json
 
-# :3
 nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('stopwords')
