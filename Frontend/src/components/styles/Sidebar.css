@@ -1,39 +1,46 @@
 .sidebar h1, 
 .sidebar h2, 
 .sidebar .upload-box, 
-.sidebar .input-box {
+.sidebar .input-box, .slider-container {
   width: 98%;
   text-align: center;
 }
 
 h2 {
   text-align: center;
-  margin: 0px !important;
+}
+.upload-box input[type="file"] { 
+  display: none; /* Hide the default button */
+}
+.upload-box label {
+  display: inline-block; /* Make the label behave like a button */
+  padding: 10px 20px; /* Add padding */
+  background-color: #007bff; /* Set background color */
+  color: white; /* Set text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Show pointer cursor on hover */
 }
 
 .sidebar h1 {
     font-size: 24px;
-    margin-bottom: 20px;
     background-color: #f1f1f1;
   }
   
   .sidebar h2 {
-    margin-bottom: 10px;
     font-size: 24px;
+    white-space: nowrap;
+    margin-bottom: 8px;
   }
   
   .upload-box button {
     padding: 8px 16px;
     background-color: #007bff;
     color: white;
-    border: none;
-    border-radius: 5px;
   }
   
   .input-box {
-    padding: 10px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
+    background-color: #ffffff;
   }
   
   .sidebar {
@@ -41,10 +48,48 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0; /* Remove any existing margins */
     padding: 20px;
     overflow-x: hidden; 
   }
  
+  .upload-box, .input-box {
+    display: flex;
+    width: 349px;
+    height: 60px;
+    padding: 1px 22px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid #9AA0A6;
+    margin-bottom: 15px;
+  }
+
+  .slider-container {
+    display: flex;
+    width: 316px;
+    height: 82px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid #9AA0A6;
+    margin-bottom: 30px;
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .submit-button {
+    border-radius: 9999px;
+    background: #000;
+    width: 156.46px;
+    height: 44px; 
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
   

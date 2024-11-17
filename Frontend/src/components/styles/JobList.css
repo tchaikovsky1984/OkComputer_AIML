@@ -1,9 +1,9 @@
 
   .job-list {
     display: flex;
-    width: 95%;
+    width: calc(100% - 105px);
     height: 96px;
-    padding-left: 43px;
+    padding-left: 100px;
     flex-direction: column;
     align-items: center;
     gap: 15px;

@@ -14,8 +14,8 @@
   .sidebar {
     position: fixed; /* Makes the sidebar fixed */
     left: 0; /* Positions it to the left */
-    top: 70px; /* Adjust top position to avoid overlap with the header*/
-    width: 250px; /* Set the width of the sidebar */
+    top: 50px; /* Adjust top position to avoid overlap with the header*/
+    width: 300px; /* Set the width of the sidebar */
     height: 100vh; /* Make it occupy full viewport height */
     overflow-y: auto; /* Enable vertical scrolling within the sidebar if content overflows */
     background-color: #ffffff; /* Choose your background color */
@@ -23,7 +23,8 @@
     border-right: 1px solid #000000;/* Optional: Add a right border */
     flex: 0 0 250px; /* Fixed width for sidebar */
     align-items: center;
-    height: 100vh;
+    height: 85vh;
+    padding-bottom: 50px;
 
   }
   
@@ -38,9 +39,9 @@
   
   .input-box, .upload-box {
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-bottom: 10px;
+    border-radius: 24px;
+    border: 1px solid #9AA0A6;
   }
   .fixed-header {
     position: fixed;
