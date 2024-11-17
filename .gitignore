@@ -1,2 +1,5 @@
 Frontend/node_modules
 .vscode
+Backend/Flask_OkComputer/myenv
+Backend/Flask_OkComputer/__pycache__
+env/
