@@ -5,3 +5,4 @@ Frontend/node_modules
 Backend/Flask_OkComputer/myenv
 Backend/Flask_OkComputer/__pycache__
 env/
+.DS_Store
