@@ -281,9 +281,8 @@ def main(job_title=None, job_location=None, num_outputs=300, filepath='sample_re
         ]
     }
     
-    json_result = json.dumps(formatted_jobs, indent=4)
     
-    return json_result
+    return formatted_jobs
 
 # if __name__ == "__main__":
 #     main(job_title="Software Engineer", job_location="New Delhi , India", filepath="sample_resume.pdf")

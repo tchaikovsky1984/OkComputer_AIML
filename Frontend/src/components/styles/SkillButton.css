@@ -15,10 +15,11 @@
     gap: 10px;            /* Adjust spacing between buttons */
   }
   .skill-button.skill-matched { /* Target skill-matched class */
-    border: 2px solid #2e620d;
+    border: 4px solid #49aa0d;
   }
   
   .skill-button.skill-missed { /* Target skill-missed class */
-    border: 2px solid #981616;
+    border: 4px solid #c82020;
+
   }
   /**/
