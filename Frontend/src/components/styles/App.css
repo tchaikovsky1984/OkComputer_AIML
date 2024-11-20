@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Microfont'; /* Choose a name for your font */
-  src: url('/home/user/OkComputer_AIML/Frontend/public/fonts/microfont.ttf') format('truetype'); /* Path to your font file */
+  src: url("../../../public/fonts/microfont.ttf") format('truetype'); /* Path to your font file */
   font-weight: normal; /* Adjust if your font has different weights */
   font-style: normal; /* Adjust if your font has different styles */
 }
